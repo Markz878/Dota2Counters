@@ -1,2 +1,0 @@
-﻿tailwindcss.exe init
-tailwindcss.exe -i ./Styles/styles.css -o ./wwwroot/css/styles.css --watch
