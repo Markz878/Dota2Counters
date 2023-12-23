@@ -1,0 +1,14 @@
+﻿@if (Hero is not null)
+{
+    <div class="m-2 rounded bg-white opacity-80 select-none">
+        <div class="flex mx-auto">
+            <img class="w-20 cursor-pointer" src="@AvatarCache.LargeAvatars[Hero.Hero]" @onclick="() => GetHeroCounterMethods.ShowHeroDetails(Hero.Hero)" />
+            <span class="text-2xl mx-2 self-center">@Hero.Hero</span>
+        </div>
+        <div>
+            <HeroCountersList Header="Good against:" HeaderColor="green" HeroList="Hero.GoodAgainst" AllHeroesList="AllHeroesList" />
+            <HeroCountersList Header="Bad against:" HeaderColor="red" HeroList="Hero.BadAgainst" AllHeroesList="AllHeroesList" />
+            <HeroCountersList Header="Good with:" HeaderColor="blue" HeroList="Hero.GoodWith" AllHeroesList="AllHeroesList" />
+        </div>
+    </div>
+}

@@ -1,0 +1,33 @@
+﻿@page "/editcounterdata";
+
+<div class="h-full grid grid-rows-[min-content_auto] grid-cols-1 overflow-x-hidden overflox-y-hidden @(animateEnter ? "animate-fadeInRight" : "") @(animateExit ? "animate-fadeOutRight" : "")">
+    <div class="row-start-1 row-end-2 md:flex md:justify-start">
+        <Button Command="Back" Text="Back" Classes="bg-gray-700 hover:bg-gray-800 focus:border-gray-900" IsBusy=isBusy Icon="back.png" />
+        <Button Command="Save" Text="Save" Classes="bg-green-700 hover:bg-green-800 focus:border-green-900" IsBusy=isBusy Icon="save.png" />
+        <Button Command="ShowFetchDialog" Text="Fetch from web" Classes="bg-amber-700 hover:bg-amber-800 focus:border-amber-900" IsBusy=isBusy Icon="download.png" />
+        @if (showCancel)
+        {
+            <Button Command="Cancel" Text="Cancel" Classes="bg-red-700 hover:bg-red-800 focus:border-red-900" IsBusy=!isBusy Icon="cancel.png" />
+        }
+        <span class="ml-2 text-white self-center row-start-3 md:row-start-auto">@progress</span>
+        <div class="ml-auto mr-2 row-start-4 self-center md:justify-self-end md:row-start-auto @(heroCounters == null ? "hidden" : "")">
+            <label class="text-white">Search:</label>
+            <input type="search" @bind="searchText" @bind:after="SetSearchText" @bind:event="oninput" class="p-1 bg-transparent text-white border-b-red-700 border-b-2" />
+        </div>
+    </div>
+    @if (heroCounters is not null)
+    {
+        <div class="overflow-y-scroll col-start-1 col-end-2 row-start-2 row-end-3">
+           @foreach (var hero in filteredHeroCounters)
+            {
+                <EditHeroCountersCard @key="hero.Hero" Hero="hero" AllHeroesList="heroCounters.Select(x=>x.Hero)" />
+            }
+@*             <Virtualize Items="@filteredHeroCounters" Context="hero" OverscanCount="2">
+                <EditHeroCountersCard @key="hero.Hero" Hero="hero" AllHeroesList="heroCounters.Select(x=>x.Hero)" />
+            </Virtualize> *@
+        </div>
+        }
+    <BusyIndicator IsBusy=isBusy Classes="col-start-1 col-end-2 row-start-2 row-end-3" />
+    <Dialog IsVisible=showDialog Text="Add bad against counters to good against lists?" Classes="col-start-1 col-end-2 row-start-2 row-end-3"
+        YesCommand="() => FetchOriginal(true)" NoCommand="() => FetchOriginal(false)" CancelCommand="Cancel"/>
+</div>

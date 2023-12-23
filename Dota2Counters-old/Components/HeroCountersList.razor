@@ -1,0 +1,30 @@
+﻿<div class="p-2">
+    <h5 class="text-2xl text-@HeaderColor-500">@Header</h5>
+    <div class="flex flex-wrap">
+        @if (HeroList is not null && HeroList.Count > 0)
+        {
+            @foreach (string hero in HeroList)
+            {
+                <div class="flex flex-row mx-4 my-1">
+                    <img class="w-10 cursor-pointer" src="@Avatars.Avatars[hero]" @onclick="() => GetHeroCounterMethods.ShowHeroDetails(hero)" loading="lazy" />
+                    <span class="text-xl">@hero</span>
+                    <button class="text-2xl ml-1 text-gray-700 w-6 h-6 mt-[2px] bg-red-200 border-black border-[1px] rounded leading-[0] pb-[4px] hover:text-red-500 hover:font-bold" @onclick="() => HeroList.Remove(hero)">&times;</button>
+                </div>
+            }
+        }
+    </div>
+    @if (HeroList is not null && AllHeroesList is not null)
+    {
+        <div class="ml-4 flex flex-row">
+            <span class="text-xl">Add:</span>
+            <input id="add-goodwith-hero-input" type="search" list="heroes" autocomplete="off" class="ml-1 border-b-black border-b-2 px-1" aria-label="Add hero" @bind="addHero" />
+            <datalist id="heroes">
+                @foreach (string hero in AllHeroesList.Where(x => !HeroList.Contains(x)))
+                {
+                    <option value="@hero" />
+                }
+            </datalist>
+            <button class="text-2xl text-gray-700 bg-green-400 rounded w-6 h-6 border-[1px] mt-[2px] border-gray-700 leading-[0] pb-[4px] hover:font-bold hover:text-black" @onclick="AddHeroToList">+</button>
+        </div>
+    }
+</div>

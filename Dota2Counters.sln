@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dota2CountersLibrary", "Dota2CountersLibrary\Dota2CountersLibrary.csproj", "{EDF21D67-7BC4-484A-A78A-C08A489E712C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AvatarRenamer", "AvatarRenamer\AvatarRenamer.csproj", "{0E55D0EE-AE2C-467F-AA61-85B584078E33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dota2Counters", "Dota2Counters\Dota2Counters.csproj", "{DE726778-FDF1-4A02-9BCB-7C4A39EFD428}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDF21D67-7BC4-484A-A78A-C08A489E712C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDF21D67-7BC4-484A-A78A-C08A489E712C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDF21D67-7BC4-484A-A78A-C08A489E712C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDF21D67-7BC4-484A-A78A-C08A489E712C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E55D0EE-AE2C-467F-AA61-85B584078E33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E55D0EE-AE2C-467F-AA61-85B584078E33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E55D0EE-AE2C-467F-AA61-85B584078E33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E55D0EE-AE2C-467F-AA61-85B584078E33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE726778-FDF1-4A02-9BCB-7C4A39EFD428}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE726778-FDF1-4A02-9BCB-7C4A39EFD428}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE726778-FDF1-4A02-9BCB-7C4A39EFD428}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DE726778-FDF1-4A02-9BCB-7C4A39EFD428}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE726778-FDF1-4A02-9BCB-7C4A39EFD428}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE726778-FDF1-4A02-9BCB-7C4A39EFD428}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DD89062C-D806-4CFC-8764-B88DF39F36B1}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,15 @@
+﻿@if (IsVisible)
+{
+    <div class="h-full w-full bg-gray-900 opacity-40 z-30 @Classes">
+    </div>
+    <div class="h-full w-full grid place-content-center bg-transparent select-none z-40 @Classes">
+        <div class="bg-gray-200 rounded-3xl border-2 border-gray-700">
+            <header class="m-2 text-2xl">@Text</header>
+            <div class="flex items-center justify-center gap-6 m-auto text-2xl font-bold text-gray-800">
+                <Button Text="Yes" Command="YesCommand" Classes="bg-green-700 border-green-900 hover:bg-green-900" />
+                <Button Text="No" Command="NoCommand" Classes="bg-red-700 border-red-900  hover:bg-red-900" />
+                <Button Text="Cancel" Command="CancelCommand" Classes="bg-gray-700 border-gray-900 hover:bg-gray-900" />
+            </div>
+        </div>
+    </div>
+}
