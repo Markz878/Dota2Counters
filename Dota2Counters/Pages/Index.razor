@@ -1,6 +1,6 @@
 ﻿@page "/"
 
-<div class="h-full grid grid-rows-[min-content_min-content_auto] overflow-y-hidden @(animateExit ? "overflow-x-hidden animate-fadeOutLeft" : "") @(animateEnter ? "overflow-x-hidden animate-fadeInLeft" : "")">
+<div class="h-full grid grid-rows-[min-content_min-content_auto] overflow-y-hidden @(animateExit ? "animate-fadeOutLeft" : "") @(animateEnter ? "animate-fadeInLeft" : "")">
     <div class="w-full row-start-1 row-end-2 grid grid-cols-1 md:grid-cols-4 grid-rows-4 md:grid-rows-1">
         <span class="ml-2 text-white self-center row-start-3 md:row-start-auto">@progress</span>
         <Button Command="GetRecommendedHeroes" Text="Get recommended heroes" Classes="bg-red-700 border-red-700 row-start-1 md:row-start-auto hover:bg-red-800 focus:border-red-900" Icon="aim.png" IsBusy=isBusy />
