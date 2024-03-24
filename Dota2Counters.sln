@@ -7,7 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dota2CountersLibrary", "Dot
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AvatarRenamer", "AvatarRenamer\AvatarRenamer.csproj", "{0E55D0EE-AE2C-467F-AA61-85B584078E33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dota2Counters", "Dota2Counters\Dota2Counters.csproj", "{DE726778-FDF1-4A02-9BCB-7C4A39EFD428}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dota2Counters", "Dota2Counters\Dota2Counters.csproj", "{DE726778-FDF1-4A02-9BCB-7C4A39EFD428}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{37FCF945-9DF6-4BD4-9BE1-52BC3B4CD4D7}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
