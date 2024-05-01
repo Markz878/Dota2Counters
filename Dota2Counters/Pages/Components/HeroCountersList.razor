@@ -5,7 +5,7 @@
         {
             @foreach (string hero in HeroList)
             {
-                <div class="flex flex-row mx-4 my-1">
+                <div class="flex mx-4 my-2">
                     <img class="w-10 cursor-pointer" src="@Avatars.Avatars[hero]" @onclick="() => GetHeroCounterMethods.ShowHeroDetails(hero)" loading="lazy" />
                     <span class="text-xl">@hero</span>
                     <button class="text-2xl ml-1 text-gray-700 w-6 h-6 mt-[2px] bg-red-200 border-black border-[1px] rounded leading-[0] pb-[4px] hover:text-red-500 hover:font-bold" @onclick="() => HeroList.Remove(hero)">&times;</button>
